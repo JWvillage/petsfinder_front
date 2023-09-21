@@ -1,5 +1,6 @@
+import {Gender, Photo} from "./commonType";
+
 export interface Member {
-  idx: string,
   id: string,
   password: string,
   type?: string,
@@ -9,10 +10,18 @@ export interface Member {
   address: string,
   phoneNumber: string,
   birthday: string,
-  photo?: string[]
+  photo?: Photo[],
+  pet? : Pet
 }
 
-export interface Gender {
-  fullName: string,
-  type: number
+export interface Pet {
+  name : string,
+  age : number,
+  neut? : boolean,
+  gender : Gender,
+  kind : string,
+  character : string,
+  species? : string,
+  photo? : Photo[],
+  member: Member
 }
